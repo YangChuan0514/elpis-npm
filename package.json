@@ -1,27 +1,16 @@
 {
-  "name": "@yangchuan/elpis",
-  "version": "1.0.17",
-  "description": "elpis-企业级全栈应用框架",
+  "name": "@yangchuan0514/elpis",
+  "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  "author": "yangchuan",
-  "license": "ISC",
-  "keywords": [
-    "elpis",
-    "nodejs",
-    "koa",
-    "yangchuan"
-  ],
   "scripts": {
     "lint": "eslint --quiet --ext js,vue .",
     "test:mac": "_ENV=local mocha 'test/**/*.js'",
-    "test:win": "set _ENV=local&&mocha 'test/**/*.js'",
-    "dev": "npm run build:dev &  NODE_ENV=local nodemon ./index.js",
-    "beta": "NODE_ENV=beta nodemon ./index.js",
-    "prod": "npm run build:prod && NODE_ENV=prod nodemon ./index.js"
+    "test:win": "set _ENV=local&&mocha 'test/**/*.js'"
   },
   "repository": {
     "type": "git",
-    "url": "https://e.coding.net/g-gwak2734/elpis/elpis.git"
+    "url": "https://github.com/YangChuan0514/elpis-npm.git"
   },
   "peerDependencies": {
     "@element-plus/icons-vue": "^2.3.1",
