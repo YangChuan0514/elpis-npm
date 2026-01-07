@@ -1,9 +1,5 @@
 <template>
-  <el-select
-    v-model="dtoValue"
-    v-bind="schema.option"
-    class="select"
-  >
+  <el-select v-model="dtoValue" v-bind="schema.option" class="select">
     <el-option
       v-for="item in schema.option?.enumList"
       :key="item.value"
@@ -16,11 +12,10 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 
-const { schema, schemaKey } = defineProps({
+const { schema, schemaKey }  = defineProps({
   schemaKey: String,
   schema: Object,
 });
-
 const emit = defineEmits([ 'loaded' ]);
 
 const dtoValue = ref();
@@ -46,5 +41,4 @@ defineExpose({
 </script>
 
 <style scoped lang="less">
-
 </style>

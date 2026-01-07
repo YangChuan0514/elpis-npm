@@ -27,7 +27,7 @@ const curl  = ({
 
   // 接口签名
   const st = Date.now();
-  const signatrue = MD5(`${apiSignKey}_${st}`);
+  const signatrue = MD5(`${options.apiSignKey}_${st}`);
 
   const newHeaders = {
     ...headers,

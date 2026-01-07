@@ -20,7 +20,6 @@ export const useSchema = function() {
       key: 'key',
       value: siderKey ?? key,
     });
-    
     if (menuItem && menuItem.schemaConfig) {
       const { schemaConfig: sConfig } = menuItem;
 

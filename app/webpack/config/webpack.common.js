@@ -6,9 +6,8 @@ const merge = require('webpack-merge');
 const { VueLoaderPlugin } = require('vue-loader');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { sep } = path;
-
 const defaultConfig = require(path.resolve(`${process.cwd()}/config/config.default.js`));
-const currentEnviromnentConfig = require(path.resolve(`${process.cwd()}/config/config.${process.env._ENV}.js`));
+const currentEnviromnentConfig = require(path.resolve(`${process.cwd()}/config/config.${process.env._ENV || 'default'}.js`));
 let config = { ...defaultConfig, ...currentEnviromnentConfig };
 (function () {
   config = Object.keys(config).reduce((obj, key) => {
@@ -248,9 +247,9 @@ module.exports = merge.smart({
         "vue": require.resolve('vue'),
         "vue-router": require.resolve('vue-router'),
         "pinia": require.resolve('pinia'),
-        "@babel/runtime/regenerator": require.resolve('@babel/runtime/regenerator'),
-        "@babel/runtime/helpers/asyncToGenerator": require.resolve('@babel/runtime/helpers/asyncToGenerator'),
-        "@babel/runtime/helpers/defineProperty": require.resolve('@babel/runtime/helpers/defineProperty'),
+        // "@babel/runtime/regenerator": require.resolve('@babel/runtime/regenerator'),
+        // "@babel/runtime/helpers/asyncToGenerator": require.resolve('@babel/runtime/helpers/asyncToGenerator'),
+        // "@babel/runtime/helpers/defineProperty": require.resolve('@babel/runtime/helpers/defineProperty'),
         "@elpisPages": path.resolve(__dirname, '../../pages'),
         "@elpisCommon": path.resolve(__dirname, '../../pages/common'),
         "@elpisWidgets": path.resolve(__dirname, '../../pages/widgets'),
@@ -263,6 +262,9 @@ module.exports = merge.smart({
         "@elpisCurl": path.resolve(__dirname, '../../pages/common/curl.js'),
         "@elpisUtls": path.resolve(__dirname, '../../pages/common/utils.js'),
         "@elpisBoot": path.resolve(__dirname, '../../pages/boot.js'),
+        "@businessSearchItemConfig": path.resolve(__dirname, '../../pages/widgets/schema-search-bar/search-item.config.js'),
+        "@businessFormItemConfig": path.resolve(__dirname, '../../pages/widgets/schema-form/form-item-config.js'),
+        "@businessComponentConfig": path.resolve(__dirname, '../../pages/dashboard/complex-view/schema-view/components/component-config.js'),
         ...aliasMap,
       }
     })(),

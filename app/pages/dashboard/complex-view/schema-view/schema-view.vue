@@ -45,7 +45,6 @@ provide('schemaViewData', {
   searchConfig,
   components
 });
-
 function onSearch(searchValueObj) {
   apiParams.value = searchValueObj;
 }

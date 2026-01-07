@@ -8,7 +8,6 @@ module.exports = () => {
     if (err) { 
       console.log(err);
       return
-      throw err 
     };
     process.stdout.write(`${stats.toString({
       colors: true, // 控制台输出色彩信息

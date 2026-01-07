@@ -24,7 +24,7 @@ module.exports = (app) => {
     const { s_sign: sSign, s_t: st } = headers;
     const time = 600 * 1000; // 签名有效期
 
-    const signatrue = MD5(`${app.config.apiSignKey}_${st}`);
+    const signatrue = MD5(`${app.options.apiSignKey}_${st}`);
 
     app.logger.info(`[${method} ${path}] signature: ${signatrue}`);
 

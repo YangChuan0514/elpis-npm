@@ -175,7 +175,6 @@ async function fetchTableData() {
   });
 
   hideLoading();
-
   if (!res || !res.success || !Array.isArray(res.data)) {
     tableData.value = [];
     total.value = 0;
