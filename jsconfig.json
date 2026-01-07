@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@elpisPages/*": ["app/pages/*"],
+      "@elpisCommon/*": ["app/pages/common/*"],
+      "@elpisWidgets/*": ["app/pages/widgets/*"],
+      "@elpisStore/*": ["app/pages/store/*"],
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}

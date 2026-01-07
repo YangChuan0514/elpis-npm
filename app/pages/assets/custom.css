@@ -1,0 +1,17 @@
+/* 初始化样式 */
+html, body {
+  height: 100%;
+  /* background-color: red; */
+}
+
+#root {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input:-webkit-autofill {
+  /* -webkit-box-shadow: 0 0 0px 1000px #121212 inset; */
+}
